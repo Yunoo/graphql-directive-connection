@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2017",
     "lib": ["esnext"],
     "module": "commonjs",
+    "esModuleInterop": true,
     "declaration": true,
     "outDir": "./lib",
     "strict": true
