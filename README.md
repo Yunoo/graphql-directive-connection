@@ -2,6 +2,11 @@
 
 This package generates relay connections by marking fields with a `@connection` directive, and then passing your SDL through `applyConnectionTransform`.
 
+## Breaking changes in v2
+
+As of the v2.x.x release, graphql-directive-connection requires Node version 12 or later, graphql 15.x.x and graphql-tools v7.x.x as peer dependencies. You can still use v1 in order to run it with older Node or GraphQL versions.
+
+
 ## Example
 
 ```

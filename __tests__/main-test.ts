@@ -45,7 +45,7 @@ test('main test', () => {
   )
   const finalSchema = makeExecutableSchema({
     typeDefs,
-    resolverValidationOptions: { requireResolversForResolveType: false },
+    resolverValidationOptions: { requireResolversForResolveType: 'ignore' },
   })
   const errors = validateSchema(finalSchema)
   expect(errors.length).toBe(0)

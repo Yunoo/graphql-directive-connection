@@ -96,7 +96,7 @@ export function applyConnectionTransform({
     schemaDirectives: {
       [directiveName]: ConnectionDirective,
     },
-    resolverValidationOptions: { requireResolversForResolveType: false },
+    resolverValidationOptions: { requireResolversForResolveType: 'ignore' },
   })
   // console.log('foundObjectTypes', foundObjectTypes)
   // console.log('foundConnections', foundConnections)
@@ -167,7 +167,7 @@ export function applyConnectionTransform({
 
   const originalTypeDefsAsArray = Array.isArray(typeDefs)
     ? typeDefs
-    : [typeDefs]
+    : <DocumentNode[]>[typeDefs]
   const a = newTypeDefs.concat(originalTypeDefsAsArray)
   const mergedTypeDefs = concatenateTypeDefs(a)
   const document = gql(mergedTypeDefs)
